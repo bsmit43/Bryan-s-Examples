@@ -62,14 +62,11 @@ namespace WpfApplication1
             datepicker1.Text = today.AddDays(-40).ToString();
             datepicker2.Text = today.ToString();
 
-
             //Programatically click update button when dashboard is loaded 
             ButtonAutomationPeer peer = new ButtonAutomationPeer(updatebutton);
             IInvokeProvider invokeProv = peer.GetPattern(PatternInterface.Invoke) as IInvokeProvider;
             invokeProv.Invoke();
         }
-
-
 
         private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -138,7 +135,6 @@ namespace WpfApplication1
                 barchart.ChartAreas.Add("Default");
                 barchart.Series.Add(barseries);
                 barchart.Series.Add(barseries2);
-
 
                 int count = 0;
 
@@ -274,7 +270,6 @@ namespace WpfApplication1
                     piechart.Series[0]["PieLabelStyle"] = "Outside";
                     //piechart.Series[0].Color = Color.LightBlue;
 
-
                     //barchart
                     barchartgf.Child = barchart;
                     barchart.ChartAreas[0].AxisX.Title = "Date(s)";
@@ -321,26 +316,20 @@ namespace WpfApplication1
                     //progressbar.Value = 0;
                     //progressbar.Refresh();
                     //this.DataGrid.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-
                 }
             }
         }
-
-
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             // Create OpenFileDialog 
             Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
 
-
-
             // Set filter for file extension and default file extension 
             dlg.DefaultExt = ".txt";
 
             // Display OpenFileDialog by calling ShowDialog method 
             Nullable<bool> result = dlg.ShowDialog();
-
 
             // Get the selected file name and display in a TextBox 
             if (result == true)
@@ -350,7 +339,6 @@ namespace WpfApplication1
                 fileTextbox.Text = filename;
             }
         }
-
 
         private void ProgressBar_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
@@ -379,6 +367,7 @@ namespace WpfApplication1
 
         private void MenuItem_Click_1(object sender, RoutedEventArgs e)
         {
+
         }
 
         private void OnChanged(object sender, FileSystemEventArgs e)
@@ -391,7 +380,6 @@ namespace WpfApplication1
                 invokeProv.Invoke();
             }));
         }
-
     }
 }
 
