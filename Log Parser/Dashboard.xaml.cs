@@ -4,14 +4,10 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Markup;
 using System.Windows.Forms.DataVisualization.Charting;
-using Xpand.ExpressApp.Dashboard;
 using System.Collections.Generic;
 using System.Windows.Automation.Peers;
 using System.Windows.Automation.Provider;
@@ -101,11 +97,7 @@ namespace WpfApplication1
 
                 //Set the status label text
                 statusLabel.Content = "Dasboard";
-
-
-                string line;
-                int counter = 0;
-  
+ 
                 //DataGridView gridView = sender as DataGridView;
                 ObservableCollection<Log> users = new ObservableCollection<Log>();
 
