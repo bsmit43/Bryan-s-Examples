@@ -18,6 +18,5 @@ namespace WpfApplication1
             Y = y;
         }
     }
-
 }
 

@@ -13,5 +13,4 @@
         public string Event_ID { get; internal set; }
         public string Account_Name { get; internal set; }
     }
-
 }

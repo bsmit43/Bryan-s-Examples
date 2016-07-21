@@ -12,7 +12,7 @@ namespace WpfApplication1
     {
         public string Readtxtfile(string fileName)
         {
-            //declare string
+            //declare empty string
             string contents = "";
             //Using memory mappedfile to read log for the time being. Seems marginally faster than Streamreader even with buffer.
             using (MemoryMappedFile mmf = MemoryMappedFile.CreateFromFile(fileName, FileMode.Open))
